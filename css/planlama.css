@@ -1,0 +1,92 @@
+@import "utils.css";
+@import "person.css";
+
+.dropdown-toggle::after {
+    display: none;
+}
+
+.task {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.task label.checked {
+    text-decoration: line-through;
+}
+
+/* div ile butonu birini sağa birini sola yanaştırır */
+.controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* span içinden active clasına sahip olan mavi yazılı olur */
+.filters span.active {
+    color: #3C87FF;
+}
+
+.filters span {
+    margin-right: 5px;
+    font-size: 15px;
+    column-rule-color: #444444;
+    cursor: pointer;
+}
+.row .card{
+    margin-top: 60px;
+    background-color: var(--koyuGri);
+    padding: 10px;
+}
+#task-list li{
+    background-color: var(--gri);
+    color: #fff;
+}
+.dropdown-menu {
+    background-color: var(--gri);
+}
+.dropdown-menu li a{
+    color:#fff;
+}
+.dropdown-menu li:hover {
+    background-color: var(--gri);
+}
+.btn-sub,
+.btn-del
+{
+    background-color: var(--koyuMavi);
+    color: #fff;
+    font-size: 15px;
+}
+.btn-sub:hover,
+.btn-del:hover
+{
+    background-color: var(--lacivert);
+    color: #fff;
+    font-size: 15px;
+}
+.input-group input{
+    font-size: 15px;
+    background-color: var(--gri);
+    color: #fff;
+}
+.neon2{
+    text-shadow:
+    0 0 5px #00f,
+    0 0 15px rgb(83, 155, 255),
+    0 0 15px #00f,
+    0 0 15px #00f,
+    0 0 15px #00f,
+    0 0 15px #00f,
+    0 0 40px #00f,
+    0 0 70px #00f,
+    0 0 80px #00f,
+    0 0 100px #00f,
+    0 0 120px #00f,
+    0 0 150px #00f;
+    font-size: 18px;
+    text-align: center;
+}
+.card-header{
+    padding: 10px;
+}

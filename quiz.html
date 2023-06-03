@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">   <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />  <!-- Font Awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>      <!-- animate.style: hareketli buton -->
+
+    <link rel="stylesheet" href="css/utils.css">
+    <link rel="stylesheet" href="css/person.css">
+    <link rel="stylesheet" href="css/quiz.css">
+    
+    <title>Blog</title>
+</head>
+<body>
+        <!-- Navbar Kısmı -->
+        <div class="navbar">
+            <div class="cover"></div>
+            <!-- logo: logo ve şirket adının tamamı -->
+            <!-- logotag: logo -->
+            <!-- log: Şirket adı(Panes) -->
+            <h1 class="logo">
+                <i class="fa-solid fa-code logotag"></i>
+                <span class="log">PANES </span>Software
+            </h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="buton"> 
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        Anasayfa</a></li>
+                    <li><a href="about.html" class="buton ">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        Hakkımızda</a></li>
+                    <li><a href="projects.html" class="buton ">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        Projelerimiz</a></li>
+                    <li><a href="person.html" class="buton active">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        Kişisel</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="baslik">
+            <h1 class="neon">Kişisel Sayfanıza Hoşgeldiniz <i class="fa-regular fa-face-smile"></i></h1>
+        </div>
+
+        <div class="row">
+            <div class="column1 col-7">
+
+                <div class="btn_start">
+                    <button class="btn">Quize  Başlayalım </button>
+                </div>
+            
+                <div class="card quiz_box">
+                    <header class="card-header">
+                        <div class="title">Quiz App</div>
+                        <div class="timer">
+                            <div class="time_text">Kalan Süre</div>
+                            <div class="time_second">10</div>
+                        </div>
+                        <div class="time_line"></div>  
+                        <!-- süre çubuğu -->
+                    </header>
+                    <section class="card-body">
+                        <div class="question_text">
+                            <!-- <span>Hangisi javascript paket yönetim uygulasıdır?</span> -->
+                        </div>
+                        <div class="option_list">
+                            <!-- <div class="option">
+                                <span>a: Node.js</span>
+                                <div class="icon"><i class="fas fa-check"></i></div>
+                            </div>
+                            <div class="option">
+                                <span>b: Typescript</span>
+                                <div class="icon"><i class="fas fa-times"></i></div>
+                            </div>
+                            <div class="option correct">
+                                <span>c: Npm</span>
+                                <div class="icon"><i class="fas fa-times"></i></div>
+                            </div>
+                            <div class="option incorrect">
+                                <span>d: Nuget</span>
+                                <div class="icon"><i class="fas fa-times"></i></div>
+                            </div> -->
+                        </div>
+                    </section>
+                    <footer class="card-footer">
+                        <div class="question_index">            
+                        </div>
+                        <button class="next_btn">Sonraki Soru</button>
+                    </footer>
+                </div>
+            
+                <!-- doğru bilinen soru sayısını yazdırma kısmı -->
+                <div class="card score_box">
+                    <div class="icon"><i class="fas fa-crown"></i></div>
+                    <div class="score_text"></div>
+                    <div class="buttons">
+                        <button class="btn btn-primary btn_replay">Tekrar Başlat</button>
+                        <button class="btn btn-primary btn_quit">Testi Bitir</button>
+                    </div>
+                </div>
+            </div> 
+        
+
+        <div class="column2 col-5">
+            <div class="kutular">
+                <ul>
+                    <li style="--i:3; --clr:#1da1f2;"><a href="planlama.html"><span><i class="fa-solid fa-calendar-days"></i></i></span> Planlama</a></li>
+                    <li style="--i:2; --clr:#c32aa3;"><a href="music.html"><span><i class="fa-sharp fa-solid fa-music"></i></span> Müzik</a></li>
+                    <li style="--i:1; --clr:#25d366;"><a href="quiz.html"><span><i class="fa-solid fa-pen-to-square"></i></i></span> Quiz</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <footer id="main_footer">
+        <div class="footer_content container">
+            <p>Copyrigth &copy; 2023. All Rights Reserved. </p>
+            <div class="social">
+                <i class="fab fa-facebook"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-linkedin"></i>
+            </div>
+        </div>
+    </footer>
+  
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+    <script src="/js/soru.js"></script>
+    <script src="/js/quiz.js"></script>
+    <script src="/js/ui.js"></script>
+    <script src="/js/script.js"></script>
+</body>
+</html>

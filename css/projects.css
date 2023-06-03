@@ -1,0 +1,46 @@
+
+.items{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 3rem;
+    box-shadow: rgb(68, 0, 255) 0px 20px 30px -10px;
+}
+.item{
+    position: relative;
+    background-color:var(--koyuGri) ;
+    overflow: hidden;
+}
+
+.item .item_image *{
+    display: flex;
+    object-fit: cover; /* resmi dive sığdırır */
+    width: 100%;
+    height: 300px;
+}
+/* resimlerin üstüne saydam zemin yerleştirip transform ile konumunu ayarlayıp transition ile ne şekilde görüneceğini ayarladım */
+.item::after{
+    content: '';
+    position: absolute;
+    display: block;
+    background-color:var(--koyuMavi) ;
+    opacity: .8;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateX(-120%) translateY(-120%) rotate(45deg);
+    transition: transform 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+/* küçük resimlerin üstüne gelince  */
+.item:hover::after{
+    /* scale 2 üstündeki saydam zeminin boyutunu 2 katına çıkarır */
+    transform:scale(2) translateX(-50%) translateY(-50%) rotate(45deg);
+}
+
+.bos{
+    height: 100px;
+}
+.item_text_title{
+    font-size: 22px;
+    padding: 15px;
+}

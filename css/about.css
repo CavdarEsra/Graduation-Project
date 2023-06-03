@@ -1,0 +1,232 @@
+@import "utils.css";
+
+/* about içerik */
+.about_content{
+    display: flex;
+    padding-top: 50px;
+    margin-top: 50px;
+}
+/* about içeriği kapsayan section */
+#about1{
+    background: var(--koyuGri);
+    color: #fff;
+    padding: 20px;
+    margin: 20px;
+    height: 300px;
+}
+.row{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    padding-bottom: 50px;
+    margin-bottom: 50px;
+}
+
+.col1{
+    display: flex;
+    background: url("/img/2.jpg");
+    background-size: cover;
+    background-position: 65% 35%;
+    border: 1px solid var(--koyuGri);
+    border-radius: 10px;
+    height: 400px;
+    box-shadow: rgb(38 30 60) 0px 15px 20px -10px;
+    opacity: .9;
+}
+.col2{
+    padding: 50px;
+    border: 1px solid var(--koyuGri);
+    border-radius: 10px;
+    text-align: center;
+    height: 400px;
+
+}
+.col3{
+    display: flex;
+    background: url("/img/60.jpg");
+    background-size: cover;
+    background-position: 65% 35%;
+    border: 1px solid var(--koyuGri);
+    border-radius: 10px;
+    height: 400px;
+    box-shadow: rgb(38 30 60) 0px 15px 20px -10px;
+    opacity: .8;
+}
+.col5{
+    display: flex;
+    background: url("/img/10.jpeg");
+    background-size: cover;
+    background-position: 65% 35%;
+    border: 1px solid var(--koyuGri);
+    border-radius: 10px;
+    height: 400px;
+    box-shadow: rgb(38 30 60) 0px 15px 20px -10px;
+    opacity: .9;
+}
+.col2 p{
+    text-align: justify;
+    padding-left: 15px;
+}
+.col3{
+    padding: 30px;
+    border: 1px solid var(--koyuGri);
+    border-radius: 10px;
+    text-align: center;
+}
+.iceri{
+    padding: 40px ;
+}
+.row ul{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+.row li{
+    position: relative;
+    list-style: none;
+}
+.row li a{
+    position: relative;
+    font-size: 40px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(200, 44, 44, 0.5);
+}
+.row li a::before{
+    content: attr(data-text);
+    position: absolute;
+    color: #fff;
+    width: 30%;
+    overflow: hidden;
+    transition: 1s;
+    border-right: 8px solid #fff;
+}
+.col li a:hover::before{
+    width: 100;
+}
+.col4{
+    display: flex;
+    background: url("/img/işortak.jpg");
+    background-size: cover;
+    background-position: 65% 35%;
+    border: 1px solid var(--koyuGri);
+    border-radius: 10px;
+    height: 400px;
+}
+
+/* slider */
+.swiper {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 150px;
+  }
+
+  .swiper-slide {
+    background-color: var(--koyuMavi);
+    background-position: center;
+    background-size: cover;
+    width: 300px;
+    height: 300px;
+    -webkit-box-reflect: below 1px linear-gradient(transparent,transparent,#0006);
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  .swiper-slide h2{
+    padding-top: 30px;
+    font-size: 30px;
+  }
+  .swiper-slide p{
+    padding: 30px;
+  }
+  .main-header{
+    background-image: url('../img/bg-1.jpeg');
+    border-image-repeat: no-repeat;
+    background-size: cover;          /*resmi sığdırsın */
+    background-position: center;        /*resmin ortası görünsün */
+    height: 100vh;      /*görünen sayfayı tam kaplasın */
+    color: #fff;
+    position: relative;
+    margin-bottom: 0;
+    box-shadow: rgb(38, 30, 60) 0px 15px 20px -10px;
+
+}
+
+/* blog sayfasının main headerı */
+.main-header.blog{
+    background-image: url("/img/3.jpg");
+    height: 50vh;
+}
+
+
+/* en üstteki büyük resmin üstündeki yazı vs */
+.main-header .content{
+    display: flex;     
+    flex-direction: column;   /* alt alta gelicekler */
+    align-items: center;      /* altındaki satırla yazınce içerik tam ortaya gelir */
+    justify-content: center;
+    text-align: center;      /* yazıyı ortalar */
+    height: 100%;   /* bunu yazmalıyız ki yüksekliğin tam ortasına konumlansın */
+    
+}
+
+/* en üstteki büyük resmin üstüne saydam bir zemin ekleme */
+.main-header::before{
+    content: '';         /* boş bir içerik */
+    position: absolute;  /*absolute nesne headera göre konumlanacağı için headera da gidip position:relative özelliği yazarız. Headerın içerisinde header kadar yer kaplayacak*/
+    top: 0;   
+    left: 0;   /* bunlarda başlayacağı konum */
+    height: 100%;
+    width: 100%;    /* içerik genişliği ve yüksekliği tam kaplasın */
+    background: rgba(0,0,0,0.7);
+}
+/* main headerın altındaki herşeyi öne çıkartır */
+.main-header *{
+    z-index: 5;
+}
+.main-header .content h1{
+    font-size: 4.5rem;
+}
+.main-header .content p{
+    font-size: 2.2rem;
+    max-width: 60rem;
+    margin: 2rem 0 3rem;
+}
+.ortak{
+    padding-bottom: 0px ;
+    border-bottom: 1px solid var(--koyuGri);
+}
+.üst{
+    margin-top: 30px;
+    padding-bottom: 0px ;
+    border-top: 1px solid var(--koyuGri);
+    border-bottom: 1px solid var(--koyuGri);
+}
+
+.section-titlee{
+    font-size: 3.5rem;
+    padding-bottom: 1rem;
+    padding-top: 15px;
+    text-transform: uppercase;
+}
+#backtotop {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
+
+#backtotop i {
+    color: var(--gri);
+    font-size: 30px;
+    transition: color .6s;
+}
+
+#backtotop i:hover {
+    color: var(--koyuGri);
+    z-index: 100;
+}

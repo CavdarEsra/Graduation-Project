@@ -1,0 +1,289 @@
+@import url('https://fonts.googleapis.com/css2?family=Delius&family=Lacquer&family=Merienda:wght@300;700&family=Open+Sans:wght@300;700&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Andika:wght@400;700&family=Berkshire+Swash&family=Handlee&family=Neucha&family=Open+Sans:wght@300;700&family=Raleway:wght@700&family=Tourney&family=Yeon+Sung&display=swap');
+
+    /* font-family: 'Andika', sans-serif;
+    font-family: 'Handlee', cursive;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Yeon Sung', cursive; */
+    
+/* 
+mavi: #0118FF
+koyu mavi: #0230A0
+lacivert: #030049
+gri: #444E66
+turuncu: #DD6A00
+*/
+
+/* Renkler */
+:root{
+    --mavi:#0118FF;
+    --koyuMavi: #0230A0;
+    --lacivert: #030049;
+    --gri: #444E66;
+    --koyuGri:#1e222d;
+    --turuncu: #DD6A00;
+}
+/* kullanımı */
+.deneme {
+    background-color: var(--koyuMavi);
+}
+
+ /* fonts */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 10px;
+    scroll-behavior: smooth;
+}
+
+body{
+    /* font-family: 'Delius', cursive;
+    font-family: 'Lacquer', cursive;
+    font-family: 'Merienda', cursive; */
+
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.6rem;
+    background: #000;
+    color: #fff;
+    line-height: 1.6;
+}
+ul{
+    list-style-type: none;
+}
+a{
+    color:var(--koyuGri);
+    text-decoration: none;
+}
+
+h1,h2{
+    font-weight: 300;
+    line-height: 1.2;
+}
+p{
+    margin: 1rem 0;
+}
+img{
+    width: 100%;
+}
+.text-center{
+    text-align: center;
+}
+
+/* elemanları yan yana alıp ortalar */
+.flex-items{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+}
+.flex-items > div{
+    padding: 20px;
+    flex-basis: 100%;
+}
+
+/************navbar**********/
+.navbar{
+    display: flex; /* navbar altındaki h1 ve navi yan yana getirir */
+    align-items: center;  /* dikeyde ortalar */
+    justify-content: space-between;
+    color: #fff;
+    position: fixed;   /* içerik kadar yer kaplar.genişliğini kaybeder, yukarda sabit kalır */
+    top: 0;
+    width: 100%;
+    height: 100px;
+    padding: 2rem 5rem;  /* 3 rem: 30px */
+    z-index: 1000;
+}
+/* navbar arkasındaki saydam zemin */
+.cover{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to bottom, rgba(16, 16, 21, 0.7),rgba(52, 52, 77, 0.7),rgba(16, 16, 21, 0.7));
+    box-shadow: 0 0 10px 0 var(--koyuGri);
+}
+.navbar ul{
+    display: flex;  /* navbar butonlarını yan yana getirir */
+}
+.logotag{
+    font-size: 50px;
+    padding-right: 20px;
+
+}
+.logo{
+    font-weight: 400;
+    opacity: 100%;
+    z-index: 1000;
+
+}
+.log{
+    color: var(--mavi);
+    font-weight: 700;
+    font-family: 'Tourney', cursive;
+    font-size: 4rem;
+    padding-right: 10px;
+}
+.navbar h1{
+    font-size: 3rem;
+}
+
+.buton{  /* navbardaki butonlar */
+    position: relative;
+    display: inline-block;
+    color: rgb(188, 179, 179);
+    background-color: var(--koyuGri);
+    padding: 1rem 2rem;
+    margin: .5rem;
+    transition: 0.5s;
+}
+.buton:hover{
+    color: rgb(255, 255, 255,1);
+}
+/* navbarda aktif olan butonun altını çizili gösterir */
+.buton.active{
+    border-bottom:1px solid var(--mavi);
+    color: #fff;
+}
+/* navbar butonların üstüne gelince kenarlarında çıkan animasyon.
+Buradan başlıyor--------------------------*/
+.buton span{
+    display: block;
+    position: absolute;
+    background: var(--mavi);
+}
+.buton span:nth-child(1){  /* sol çizgi */
+    left: 0;
+    bottom: 0;
+    width: 1.5px;
+    height: 100%;
+    transform: scaleY(0);
+    transform-origin: top;  /* nereye doğru gidecek */
+    transition: transform 0.5s;  /* ne kadar sürede */
+}
+.buton:hover span:nth-child(1){
+    transform: scaleY(1);
+    transform-origin: bottom;
+    transition: transform 0.5s;
+}
+
+.buton span:nth-child(2){  /* alt çubuk */
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1.5px;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.5s;
+}
+.buton:hover span:nth-child(2){
+    transform: scaleX(1);
+    transform-origin: left;
+    transition: transform 0.5s;
+}
+.buton span:nth-child(3){  /* sol çubuk */
+    right: 0;
+    bottom: 0;
+    width: 1.5px;
+    height: 100%;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.5s;
+    transition-delay: 0.3s;
+
+}
+.buton:hover span:nth-child(3){
+    transform: scaleY(1);
+    transform-origin: bottom;
+    transition: transform 0.5s;
+    transition-delay: 0.3s;
+
+}
+.buton span:nth-child(4){  /* üst çubuk */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 1.5px;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.5s;
+    transition-delay: 0.3s;
+}
+.buton:hover span:nth-child(4){
+    transform: scaleX(1);
+    transform-origin: left;
+    transition: transform 0.5s;
+    transition-delay: 0.3s;
+
+}
+/* ----------------------------- */
+/* ***************************** */
+
+/* ************* Footer **********************/
+#main_footer{
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: var(--koyuMavi);
+    color: #fff;
+    height: 150px;
+}
+.footer_content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 150px;
+}
+.social .fab{
+    margin-right: 1.5rem;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    text-align: center;
+    padding: 1rem;
+    transition: all .4s;
+}
+.social .fab:hover{
+    background: var(--lacivert);
+}
+/* ******************************************** */
+
+
+/* ************ ortalanmış başlık ve açıklama ****************/
+.text-center{
+    text-align: center;
+}
+.section-title{
+    font-size: 3.5rem;
+    padding-bottom: 1rem;
+    padding-top: 25px;
+    text-transform: uppercase;
+}
+.section-title2{
+    font-size: 3.5rem;
+    padding-bottom: 1rem;
+    padding-top: 140px;
+    text-transform: uppercase;
+}
+.border-bottomm{
+    height: 4px;
+    width: 5rem;
+    background-color: var(--mavi);
+    margin: 0 auto 1rem auto ;
+}
+/* ortalanmış açıklama metni */
+.lead{
+    font-size: 1.4rem;
+    margin-bottom : 2rem;
+    word-spacing: 2px;
+}
+.lead2{
+    font-size: 1.4rem;
+    margin-bottom : 4rem;
+    word-spacing: 2px;
+}

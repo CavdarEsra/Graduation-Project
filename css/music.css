@@ -1,0 +1,53 @@
+@import "person.css";
+@import "utils.css";
+
+.btn{
+    font-size: 15px;
+    height: 100%;
+    width: 30px;
+    margin:5px;
+    padding: 5px;
+    box-shadow: 5px 2px 8px var(--mavi);
+}
+#music-image{
+    display: flex;
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    width: 100%;
+    box-shadow: 5px 2px 30px var(--koyuGri);
+
+}
+
+#progress .times,
+.card-footer,
+.volume-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.column1 .container{
+    padding-left: 30px ;
+    width: 500px;
+}
+.volume-container i {
+    margin-right: 5px;
+}
+
+li.playing {
+    background-color: var(--gri) !important;
+    color: #fff !important;
+    
+}
+#music-list .list-group li{
+    padding: 10px ;
+    background-color: var(--koyuGri);
+    color: rgb(213, 210, 210);
+    font-size: 15px;
+}
+.row{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding-bottom: 320px !important;
+}

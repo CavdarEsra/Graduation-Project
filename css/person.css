@@ -1,0 +1,185 @@
+/* başlık */
+
+.baslik{
+    width: 100%;
+    height: 100px;
+    padding-top: 150px;
+    padding-bottom: 50px;
+    text-align: center;
+}
+/* neonlu başlık */
+
+.baslik .neon{
+    text-shadow:
+     0 0 5px rgb(83, 155, 255),
+     0 0 15px rgb(83, 155, 255),
+     0 0 15px #00f,
+     0 0 15px #00f,
+     0 0 15px #00f,
+     0 0 15px #00f,
+     0 0 40px #00f,
+     0 0 70px #00f,
+     0 0 80px #00f,
+     0 0 100px #00f,
+     0 0 120px #00f,
+     0 0 150px #00f;
+}
+.row{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding-bottom: 200px ;
+}
+.column1{
+    padding: 50px;
+    display: flex;
+    height: 400px;
+}
+/* defter gibi açılan card */
+.cart{
+    position: relative;
+    margin-left: 300px;
+    width: 300px;
+    height: 400px;
+    background: #fff;
+    transform-style: preserve-3d;
+    transform: perspective(2000px);
+    transition: 1s;
+    box-shadow: inset 300px 0 50px rgba(0, 0, 0, .5);
+}
+.cart:hover{
+    transform: perspective(2000px) rotate(-10deg);
+    box-shadow: inset 20px 0 50px rgba(0, 0, 0, .5);
+}
+.cart .imgB{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border: 2px solid var(--mavi);
+    box-sizing: border-box;
+    transform-origin: left;
+    z-index: 1;
+    transition: 1s;
+}
+/* üstüne gelince sayfa açılır */
+.cart:hover .imgB{
+    transform: rotateY(-135deg);
+}
+.cart .imgB img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* resmin ortasını gösterir */
+}
+
+.cart .yazi{
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    padding: 20px;
+    color: #000;
+}
+.cart .yazi h2{
+    text-align: center;
+    padding: 20px 20px;
+    font-style: bold;
+    font-weight: 700;
+}
+.cart .yazi p{
+    margin: 10px;
+    font-style: bold;
+}
+.column2{
+    padding: 100px;
+    margin-top: 60px;
+}
+
+.kutular ul{
+    position: relative;
+    transform: skewY(-15deg);  /* yazı çapraz duruyor */
+}
+.kutular ul li{
+    /* ön kısmı */
+    position: relative;
+    width: 300px;
+    background: var(--koyuGri);
+    padding: 15px;
+    transition: .5s;
+    z-index: calc(1 * var(--i));
+    /* html sayfasında lilere style içinde verilen sıra nolarına(--i) göre ön kısımda görünmesini sağlar */
+}
+.kutular ul li:hover{
+    transform: translateX(-50px);
+    background: var(--clr);     /* html sayfasında li taglarine style içinde verdiğimiz renkleri aktif eder */
+}
+.kutular ul li::before{
+    /* sol kapak */
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -40px;
+    width: 40px;
+    height: 56px;
+    background: var(--gri);
+    filter: brightness(0.7); /* parlaklık */
+    transform-origin: right;
+    transform: skewY(45deg);
+    transition: 0.5s;
+}
+/* üstüne gelince sol kapak */
+.kutular ul li:hover::before{
+    background: var(--clr);
+    filter: brightness(0.7);
+}
+/* üst kapaklar */
+.kutular ul li::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: -40px;
+    width: 100%;
+    height: 40px;
+    background: rgb(57, 56, 71);
+    filter: brightness(0.9);
+    transform-origin: bottom;
+    transform: skewX(45deg);
+    transition: 0.5s;
+}
+.kutular ul li:hover::after{
+    background: var(--clr);
+    filter: brightness(0.9);
+}
+.kutular ul li a{
+    display: block;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(185, 186, 216);
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    transition: 0.5s;
+    text-align: center;
+}
+.kutular ul li:hover a{
+    color: #fff;
+}
+.kutular ul li:last-child::after{
+    box-shadow: -120px 120px 25px rgba(41, 41, 61, 25);
+}
+
+.kutular ul li span{
+    position: absolute;
+    top: 0;
+    left: -40px;
+    width: 40px;
+    height: 60px;
+    transform-origin: right;
+    transform: skewY(45deg);
+    transition: 0.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.25em;
+}
