@@ -2,7 +2,8 @@
 ## Used Technologies 
 * HTML 
 * CSS 
-* JAVASCRIPT 
+* JAVASCRIPT
+* Face.api.js
 ### Screenshot Of Website 
 ![Ekran resmi1](https://github.com/CavdarEsra/graduation-project/blob/main/ProjeninEkranG%C3%B6r%C3%BCnt%C3%BCleri/login.jpg)
 ![Ekran resmi2](https://github.com/CavdarEsra/graduation-project/blob/main/ProjeninEkranG%C3%B6r%C3%BCnt%C3%BCleri/login2.jpg)
@@ -17,4 +18,3 @@
 ![Ekran resmi11](https://github.com/CavdarEsra/graduation-project/blob/main/ProjeninEkranG%C3%B6r%C3%BCnt%C3%BCleri/about6.jpg)
 ![Ekran resmi12](https://github.com/CavdarEsra/graduation-project/blob/main/ProjeninEkranG%C3%B6r%C3%BCnt%C3%BCleri/project1.jpg)
 ![Ekran resmi13](https://github.com/CavdarEsra/graduation-project/blob/main/ProjeninEkranG%C3%B6r%C3%BCnt%C3%BCleri/project2.jpg)
-
