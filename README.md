@@ -1,4 +1,4 @@
-# E-Commerce Website 
+# Graduation Project 
 ## Used Technologies 
 * HTML 
 * CSS 
