@@ -1,10 +1,11 @@
-# Graduation Project 
+# Graduation Project - Website Opened with Face Recognition
 ## Used Technologies 
 * HTML 
 * CSS 
 * JAVASCRIPT
-* Face.api.js
+* Face.api.js  :  Yüz tanıma işlemleri için bu API kullanıldı
 ### Screenshot Of Website 
+Aşağıda projemin ekran görüntüleri yer almaktadır. Projede yüz okuması yapılarak kayıtlı kişilerin web sitesine erişimine izin verilerek girişi sağlanır. Yüz okumada kişi kayıtlı değilse kayıt ekranına yönlendirilir. 
 ![Ekran resmi1](https://github.com/CavdarEsra/graduation-project/blob/main/ProjeninEkranG%C3%B6r%C3%BCnt%C3%BCleri/login.jpg)
 ![Ekran resmi2](https://github.com/CavdarEsra/graduation-project/blob/main/ProjeninEkranG%C3%B6r%C3%BCnt%C3%BCleri/login2.jpg)
 ![Ekran resmi3](https://github.com/CavdarEsra/graduation-project/blob/main/ProjeninEkranG%C3%B6r%C3%BCnt%C3%BCleri/login3.jpg)
